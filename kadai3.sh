@@ -12,7 +12,7 @@ if [ ! -e ${tmp} ]; then
   mkdir ${tmp}
 fi
 
-# test1 : arg1 < arg2
+# test1 : arg1 < arg2 (arg1, arg2 > 0)
 echo "test1 : arg1 < arg2 : 12 18"
 test_case_num=1
 
@@ -25,7 +25,7 @@ echo "test1 Success!"
 #exit 0
 
 
-# test2 : arg1 < arg2
+# test2 : arg1 < arg2 (arg1, arg2 > 0)
 echo "test2 : arg1 > arg2 : 20 15"
 test_case_num=2
 
@@ -37,7 +37,7 @@ diff ${tmp}/res_expected ${tmp}/res_executed || error_func $test_case_num "Not e
 echo "test2 Success!"
 
 
-# test3 : arg1 = arg2
+# test3 : arg1 = arg2 (arg1, arg2 > 0)
 echo "test3 : arg1 = arg2 : 19 19"
 test_case_num=3
 
