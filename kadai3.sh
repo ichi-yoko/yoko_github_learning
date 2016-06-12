@@ -13,4 +13,26 @@ echo 6 > ${tmp}/res_expected
 
 diff ${tmp}/res_expected ${tmp}/res_executed || echo "diff command Error"
 
+echo "test1 Success!"
+exit 0
+
+
+# test2 : arg1 < arg2
+
+echo 5 > ${tmp}/res_expected
+./z15096yi 20 15 > ${tmp}/res_executed || echo "Mobule Error"
+
+diff ${tmp}/res_expected ${tmp}/res_executed || echo "diff command Error"
+
+echo "test2 Success!"
+exit 0
+
+
+if [ -e ${tmp} ]; then
+  rm -r ${tmp}
+fi
+
+
+
 echo "Success!"
+exit 0
